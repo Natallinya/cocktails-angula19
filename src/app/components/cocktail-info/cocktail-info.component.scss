@@ -1,0 +1,34 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    margin-bottom: 2rem;
+  }
+
+  img {
+    width: auto;
+    max-width: 90%;
+  }
+
+  .ingredients {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    background-color: #BFDBFE;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+
+      p-badge {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

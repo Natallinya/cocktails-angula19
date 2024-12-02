@@ -1,0 +1,27 @@
+:host {
+  --gap: 24px;
+  --elements: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #BFDBFE;
+  padding: 1rem;
+  cursor: pointer;
+  width: calc((100% - ((var(--elements) - 1) * var(--gap))) / (var(--elements)));
+
+  img {
+    width: auto;
+    max-width: 90%;
+  }
+
+  @media (max-width: 1440px) {
+    --elements: 2;
+  }
+  @media (max-width: 768px) {
+    --elements: 1;
+    --gap: 0px;
+    margin-bottom: 8px;
+  }
+}
+

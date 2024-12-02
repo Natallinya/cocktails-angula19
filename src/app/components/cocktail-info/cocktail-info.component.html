@@ -1,0 +1,12 @@
+<img alt="Изображение" [attr.src]="model.strDrinkThumb"/>
+<p> {{ model.strGlass }}</p>
+<div class="ingredients">
+  @for (ingredient of model.strIngredients; track cocktail) {
+    <div class="ingredients__item">
+      <p-badge [value]="$index +1"/>
+      <p> {{ ingredient }}</p>
+    </div>
+  }
+</div>
+<span>{{ model.strInstructions }}</span>
+

@@ -1,0 +1,17 @@
+@if (model$ | async; as model) {
+  @if (model.state === state.READY && !!model.item) {
+    <div class="cocktails-container">
+      <app-cocktail-info [cocktail]="model.item"></app-cocktail-info>
+    </div>
+  }
+  @if (model.state === state.PENDING) {
+    <p-progressSpinner ariaLabel="loading"/>
+  }
+  @if (model.state === state.EMPTY) {
+    <p>Коктейль не найден</p>
+  }
+
+  @if (model.state === state.ERROR) {
+    <p-button label="Ошибка" icon="pi pi-refresh" severity="danger" (click)="refresh$.next(true)"/>
+  }
+}

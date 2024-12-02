@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+
+  .tools-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 32px;
+
+    p-floatLabel, input {
+      width: 100%;
+    }
+
+    & > * {
+      margin-right: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    .tools-bar {
+      & > * {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    .tools-bar {
+      width: 100%;
+    }
+  }
+}
