@@ -1,3 +1,6 @@
+Для запуска важно устанавливать зависимости  npm i  --legacy-peer-deps с флагом. (PrimeNg ловит рассинхрон) 
+Для пользования Api нужен VPN
+
 # Cocktails
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
